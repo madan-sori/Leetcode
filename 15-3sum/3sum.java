@@ -11,7 +11,7 @@ class Solution {
 
         for (int i = 0; i < n - 2; i++) {
 
-            // Skip duplicate first elements
+            // Skip duplicate first numbers
             if (i > 0 && nums[i] == nums[i - 1]) {
                 continue;
             }
@@ -24,27 +24,24 @@ class Solution {
                 int sum = nums[i] + nums[left] + nums[right];
 
                 if (sum == 0) {
-
                     result.add(Arrays.asList(
-                            nums[i],
-                            nums[left],
-                            nums[right]
+                        nums[i],
+                        nums[left],
+                        nums[right]
                     ));
 
-                    left++;
-                    right--;
-
                     // Skip duplicate left values
-                    while (left < right &&
-                           nums[left] == nums[left - 1]) {
+                    while (left < right && nums[left] == nums[left + 1]) {
                         left++;
                     }
 
                     // Skip duplicate right values
-                    while (left < right &&
-                           nums[right] == nums[right + 1]) {
+                    while (left < right && nums[right] == nums[right - 1]) {
                         right--;
                     }
+
+                    left++;
+                    right--;
 
                 } else if (sum < 0) {
                     left++;
@@ -56,5 +53,4 @@ class Solution {
 
         return result;
     }
-
-    }
+}
