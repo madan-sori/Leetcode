@@ -10,4 +10,8 @@ class Solution {
 
         return max;
     }
-}
+
+    // int maxWords = 0;
+
+    // for(int i = 0; i < sentences.lenght)
+} 
