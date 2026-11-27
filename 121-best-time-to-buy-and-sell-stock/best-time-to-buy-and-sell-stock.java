@@ -10,7 +10,7 @@ class Solution {
         //     buyprize=prices[i];
         //    }
         // }
-        //    return maxprofit;
+        // //    return maxprofit;
         int minPrices = Integer.MAX_VALUE; 
 
         int profit = 0 ; 
@@ -27,7 +27,9 @@ class Solution {
         }
          return profit;
 
-         
+
+
+
 
 
         }
